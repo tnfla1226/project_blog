@@ -62,6 +62,6 @@ class BlogMapperTest {
         for (Blog article : articles) {
             System.out.println(article);
         }
-        Assertions.assertTrue(articles.size() == 300);
+        Assertions.assertTrue(articles.size() == 8);
     }
 }

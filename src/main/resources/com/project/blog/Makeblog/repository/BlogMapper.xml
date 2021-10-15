@@ -26,6 +26,7 @@
             (SELECT  /*+INDEX_DESC(board)*/
             rownum rn, serial_no, board_no, board_title, board_content, board_view_cnt, board_date, category_no
             FROM board
+            WHERE rownum <= 10)
             ]]>
     </select>
 
