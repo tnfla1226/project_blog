@@ -20,20 +20,20 @@ public interface BlogMapper {
     int getTotalCount();
 
     //2. 게시물 상세 조회
-    Blog getContent(int boardNo);
+    Blog getContent(int serialNo);
 
     //3. 게시물 등록(게시물 등록 성공하면 트루)
     boolean insertArticle(Blog blog);
 
     //4. 게시물 삭제
-    boolean deleteArticle(int boardNo);
+    boolean deleteArticle(int serialNo);
 
     //5. 게시물 수정
     boolean modifyArticle(Blog blog);
 
 
     //6. 조회수 상승
-    void upViewCount(int boardNo);
+    void upViewCount(int serialNo);
 }
 
 

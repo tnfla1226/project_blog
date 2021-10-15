@@ -53,7 +53,7 @@
     <!--  인터페이스에서 ()에 적은거 넣어야해~!!  -->
     <select id="getContent" resultMap="boardMap">
         SELECT * FROM board
-        WHERE board_no = #{boardNo}
+        WHERE serial_no = #{serialNo}
     </select>
 
     <insert id="insertArticle">
@@ -78,7 +78,7 @@
     <update id="upViewCount">
         update board
         set view_cnt = view_cnt + 1
-        where board_no = #{boardNo}
+        where board_no = #{serialNo}
     </update>
 
 
