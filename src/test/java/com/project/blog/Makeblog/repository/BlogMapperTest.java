@@ -36,10 +36,12 @@ class BlogMapperTest {
     @DisplayName("게시글을 수정")
     void modify() {
         Blog blog = new Blog();
-        blog.setBoardNo(3);
-        blog.setBoardContent("123");
+        blog.setSerialNo(11);
+        blog.setBoardNo(1);
+        blog.setCategoryNo(2);
+        blog.setBoardContent("121241241243");
         blog.setBoardTitle("123");
-        blogMapper.modifyArticle(blog.getBoardNo());
+        blogMapper.modifyArticle(blog);
     }
 
     @Test

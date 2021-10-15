@@ -29,7 +29,7 @@ public interface BlogMapper {
     boolean deleteArticle(int boardNo);
 
     //5. 게시물 수정
-    boolean modifyArticle(int boardNo);
+    boolean modifyArticle(Blog blog);
 
 
     //6. 조회수 상승

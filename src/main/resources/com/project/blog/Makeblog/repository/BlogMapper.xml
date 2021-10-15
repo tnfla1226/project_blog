@@ -71,7 +71,7 @@
     <update id="modifyArticle">
         UPDATE board SET
         board_title = #{boardTitle}, board_content = #{boardContent}
-        WHERE board_no = #{boardNo}
+        WHERE serial_no = #{serialNo}
     </update>
 
     <!--  조회수 상승 SQL  -->
