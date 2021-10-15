@@ -6,6 +6,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -46,6 +48,8 @@ class BlogMapperTest {
 
     @Test
     @DisplayName("게시글 삭제")
+    @Transactional
+    @Rollback
     void delete() {
         blogMapper.deleteArticle(3);
     }
@@ -53,7 +57,8 @@ class BlogMapperTest {
     @Test
     @DisplayName("게시글 상세 조회")
     void info() {
-        blogMapper.getContent(3);
+        Blog content = blogMapper.getContent(3);
+
     }
 
     @Test

@@ -5,7 +5,7 @@ plugins {
 	id 'war'
 }
 
-group = 'com.spring'
+group = 'com.project'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -21,7 +21,8 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+    implementation 'org.projectlombok:lombok:1.18.20'
+    compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

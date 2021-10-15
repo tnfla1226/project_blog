@@ -16,6 +16,7 @@ public interface BlogMapper {
 
     //1-3. 검색 적용    (최종본. 1. 1-2 는 연습용)
     List<Blog> getSearchArticles();
+
     //총 겜시물 수 조회
     int getTotalCount();
 
