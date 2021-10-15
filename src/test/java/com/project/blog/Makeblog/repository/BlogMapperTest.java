@@ -64,6 +64,7 @@ class BlogMapperTest {
         for (Blog article : articles) {
             System.out.println(article);
         }
+        // size는 게시물의 개수
         Assertions.assertTrue(articles.size() == 8);
     }
 }

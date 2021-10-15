@@ -65,7 +65,7 @@
 
     <delete id="deleteArticle">
         DELETE FROM board
-        WHERE board_no = #{boardNo}
+        WHERE serial_no = #{serialNo}
     </delete>
 
     <update id="modifyArticle">
