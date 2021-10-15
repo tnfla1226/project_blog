@@ -1,10 +1,13 @@
 package com.project.blog.Makeblog.repository;
 
 import com.project.blog.Makeblog.domain.Blog;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,4 +32,36 @@ class BlogMapperTest {
         System.out.println("게시물 등록 성공!");
     }
 
+    @Test
+    @DisplayName("게시글을 수정")
+    void modify() {
+        Blog blog = new Blog();
+        blog.setBoardNo(3);
+        blog.setBoardContent("123");
+        blog.setBoardTitle("123");
+        blogMapper.modifyArticle(blog.getBoardNo());
+    }
+
+    @Test
+    @DisplayName("게시글 삭제")
+    void delete() {
+        blogMapper.deleteArticle(3);
+    }
+
+    @Test
+    @DisplayName("게시글 상세 조회")
+    void info() {
+        blogMapper.getContent(3);
+    }
+
+    @Test
+    @DisplayName("전체 게시물을 글번호 내림차순으로 조회해야 한다.")
+    void selectAll() {
+        List<Blog> articles = blogMapper.getSearchArticles();
+
+        for (Blog article : articles) {
+            System.out.println(article);
+        }
+        Assertions.assertTrue(articles.size() == 300);
+    }
 }

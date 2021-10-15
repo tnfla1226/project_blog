@@ -21,31 +21,12 @@
             이 안에 태그는 다 인식 안된다. 문자로 인식 되는 특징 있음. -->
         <![CDATA[
             SELECT
-            board_no, writer, title, content, reg_date, view_cnt
+            serial_no, board_no, board_title, board_content, board_view_cnt, board_date, category_no
             FROM
-            (SELECT  /*+INDEX_DESC(board pk_board)*/
-            rownum rn, board_no, title, writer, content, reg_date, view_cnt
+            (SELECT  /*+INDEX_DESC(board)*/
+            rownum rn, serial_no, board_no, board_title, board_content, board_view_cnt, board_date, category_no
             FROM board
-            WHERE 1=1
             ]]>
-        <if test="type == 'title'">
-            AND title LIKE '%'|| #{keyword} || '%'
-        </if>
-        <if test="type == 'content'">
-            AND content LIKE '%'|| #{keyword} || '%'
-        </if>
-        <if test="type == 'writer'">
-            AND writer LIKE '%'|| #{keyword} || '%'
-        </if>
-        <if test="type == 'titleContent'">
-            AND title LIKE '%'|| #{keyword} || '%'
-            OR content LIKE '%'|| #{keyword} || '%'
-        </if>
-
-        <![CDATA[
-                AND rownum <= #{pageNum} * #{amount})
-            WHERE rn > (#{pageNum} - 1) * #{amount}
-        ]]>
     </select>
 
     <!-- 총 게시물 수 조회 -->
@@ -88,7 +69,7 @@
 
     <update id="modifyArticle">
         UPDATE board SET
-        title = #{title}, content = #{content}
+        board_title = #{boardTitle}, board_content = #{boardContent}
         WHERE board_no = #{boardNo}
     </update>
 
