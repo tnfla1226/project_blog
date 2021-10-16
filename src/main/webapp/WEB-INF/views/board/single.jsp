@@ -1,3 +1,9 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +20,9 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+
+    <%@ include file="../include/header.jsp" %>
+
 </head>
 
 <body>
@@ -145,13 +154,13 @@
                             </div>
                             <form action="#" method="get">
                                 <div class="name">
-                                    <input type="text" name="" id="" placeholder="Name" class="name">
+                                    <input type="text" name="" id="1" placeholder="Name" class="name">
                                 </div>
                                 <div class="email">
-                                    <input type="email" name="" id="" placeholder="Email" class="email">
+                                    <input type="email" name="" id="2" placeholder="Email" class="email">
                                 </div>
                                 <div class="comment">
-                                    <input type="text" name="" id="" placeholder="Comment" class="comment">
+                                    <input type="text" name="" id="3" placeholder="Comment" class="comment">
                                 </div>
                                 <div class="post">
                                     <input type="submit" value="Post">

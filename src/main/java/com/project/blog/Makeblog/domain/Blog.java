@@ -17,4 +17,6 @@ public class Blog {
     private Date boardDate;
     private int categoryNo;
 
+    private boolean newFlag; //신규게시물 여부
+
 }
