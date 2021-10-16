@@ -20,9 +20,46 @@ public class BlogController {
 
     private final BlogService blogService;
 
+
+    @GetMapping("/movie-list")
+    public String movieList(Model model) {
+        log.info("/board/movie-list GET 요청 발생");
+//        List<Blog> articles = blogService.getArticles();
+//        model.addAttribute("articles", articles);
+
+        return "board/movie";
+    }
+
     @GetMapping("/restaurant-list")
+    public String restaurantList(Model model) {
+        log.info("/board/restaurant-list GET 요청 발생");
+//        List<Blog> articles = blogService.getArticles();
+//        model.addAttribute("articles", articles);
+
+        return "board/movie";
+    }
+
+    @GetMapping("/daily-list")
+    public String dailyList(Model model) {
+        log.info("/board/daily-list GET 요청 발생");
+//        List<Blog> articles = blogService.getArticles();
+//        model.addAttribute("articles", articles);
+
+        return "board/movie";
+    }
+
+    @GetMapping("/guest-book")
     public String list(Model model) {
-        log.info("/board/restaurnat-list GET 요청 발생");
+        log.info("/board/guest-book GET 요청 발생");
+        /*List<Blog> articles = blogService.getArticles();
+        model.addAttribute("articles", articles);*/
+
+        return "board/movie";
+    }
+
+    @GetMapping("/single")
+    public String showSingle(Model model) {
+        log.info("/board/guest-book GET 요청 발생");
         /*List<Blog> articles = blogService.getArticles();
         model.addAttribute("articles", articles);*/
 
